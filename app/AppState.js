@@ -11,13 +11,14 @@ class AppState extends EventEmitter {
     new Car({ make: 'Ford', model: 'Pinto', year: 1980, price: 1488, color: '#900d09', description: 'This car is HOT!!!', imgUrl: 'https://i.ytimg.com/vi/1mqu-gRqt3g/hqdefault.jpg' })
   ]
   /** @type {House[]} */
+  // this is the instance of 3 different houses that get put on the page when you click houses .
   houses = [
     new House({lotsize: 10000, builder: 'quinn homes', year: 2020, price: 250000, type: 'bungalow', description: 'has a great view from the back deck', imgUrl: 'https://media.istockphoto.com/photos/exterior-of-small-american-house-with-blue-paint-picture-id589538090?k=20&m=589538090&s=612x612&w=0&h=5obd9GWPEDn4AzSe7TYlBeLbGKtzOol-xPf0nL474eY='}),
     new House({ lotsize: 7500, builder: 'kody homes', year: 2018, price: 300000, type: 'craftsman', description: 'this is a beautiful water front property', imgUrl: 'https://media.istockphoto.com/photos/generic-home-for-sale-picture-id187062976?k=20&m=187062976&s=612x612&w=0&h=mVZQSwEODaaVX73laMc4T0ZFlIVmxumQvZKglVIMHT8=' }),
     new House({lotsize: 200000, builder:'william homes', year: 2008, price: 199000, type: 'tiny home', description: 'perfect dark green lawn!!', imgUrl: 'https://media.istockphoto.com/photos/american-craftsman-house-picture-id178559422?k=20&m=178559422&s=612x612&w=0&h=EXdN4TKEqcnCfei4ynpbAT49hg8Nc--vvN6oEIThU_0='})
   ]
 }
-
+//  this is magic...
 export const ProxyState = new Proxy(new AppState(), {
   get(target, prop) {
     isValidProp(target, prop)

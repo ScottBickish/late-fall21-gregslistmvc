@@ -1,5 +1,7 @@
 export function getHouseForm() {
+    // this is the modal form and changes made to make it look nice. 
     return /*html*/`
+    
     <form onsubmit="app.housesController.createHouse()">
       <div class="mb-3 d-flex justify-content-between">
       <div>

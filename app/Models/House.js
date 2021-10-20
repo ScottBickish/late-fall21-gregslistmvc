@@ -2,7 +2,7 @@ import { generateId } from "../Utils/generateId.js"
 
 export class House {
   constructor(data) {
-    
+    // this in other words is what a 'house' should look like. plus this is where the random id is assigned. 
     this.id = generateId()
     this.lotsize = data.lotsize
     this.builder = data.builder
@@ -12,7 +12,7 @@ export class House {
     this.description = data.description
     this.imgUrl = data.imgUrl
   }
- 
+//  this is the actual html of how the card look after you submit the post. its a template
   get Template() {
     return `
     <div class="col-md-3 mt-3">
